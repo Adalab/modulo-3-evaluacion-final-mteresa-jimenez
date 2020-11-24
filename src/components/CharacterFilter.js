@@ -7,7 +7,7 @@ const CharacterFilter = (props) => {
   };
   return (
     <form>
-      <label htmlFor="characterName">Escribe el nombre de un personaje:</label>
+      <label htmlFor="characterName">Escribe el nombre de un personaje: </label>
       <input id="characterName" type="text" onChange={handleFilter} />
     </form>
   );

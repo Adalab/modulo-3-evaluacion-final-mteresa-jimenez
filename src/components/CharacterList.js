@@ -14,7 +14,7 @@ const CharacterList = (props) => {
   return (
     <div>
       <Header />
-      <CharacterFilter />
+      <CharacterFilter handleFilter={props.handleFilter} />
       <ul>{characterslist}</ul>
     </div>
   );

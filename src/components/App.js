@@ -12,13 +12,13 @@ const App = (props) => {
     });
   }, []);
 
-  // const handleFilter = (filterText) => {
-  //   return console.log("ha cambiado", filterText);
-  // };
+  const handleFilter = (filterText) => {
+    console.log("ha cambiado", filterText);
+  };
 
   return (
     <div className="App">
-      <CharacterList characters={characters} />
+      <CharacterList characters={characters} handleFilter={handleFilter} />
     </div>
   );
 };
