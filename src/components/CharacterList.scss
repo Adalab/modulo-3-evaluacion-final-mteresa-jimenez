@@ -1,0 +1,26 @@
+.characters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  &--card {
+    width: 230px;
+    height: 320px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    border: white solid 1px;
+    background-color: rgb(122, 231, 122);
+    border-radius: 25px;
+
+    &__image {
+      border-radius: 25px 25px 0px 0px;
+      width: 228px;
+      height: 228px;
+    }
+
+    &__name {
+      margin: 10px;
+      font-weight: 600;
+    }
+  }
+}

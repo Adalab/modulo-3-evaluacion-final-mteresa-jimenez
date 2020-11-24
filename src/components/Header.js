@@ -1,7 +1,9 @@
+import logo from "../images/logo.png";
+
 const Header = () => {
   return (
     <header>
-      <h1>Rick y Morty</h1>
+      <img src={logo} alt="Logo con el nombre de la serie - Rick y Morty" />
       <p>
         <strong>
           "No me vas a creer, porque casi nunca pasa, pero cometí un error."

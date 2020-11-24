@@ -1,11 +1,12 @@
 import CharacterCard from "./CharacterCard";
 import CharacterFilter from "./CharacterFilter";
 import Header from "./Header";
+import "./CharacterList.scss";
 
 const CharacterList = (props) => {
   const characterslist = props.characters.map((character) => {
     return (
-      <li key={character.id}>
+      <li className="characters--card" key={character.id}>
         <CharacterCard character={character} />
       </li>
     );
@@ -15,7 +16,7 @@ const CharacterList = (props) => {
     <div>
       <Header />
       <CharacterFilter handleFilter={props.handleFilter} />
-      <ul>{characterslist}</ul>
+      <ul className="characters">{characterslist}</ul>
     </div>
   );
 };

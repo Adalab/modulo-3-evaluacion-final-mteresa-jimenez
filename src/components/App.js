@@ -1,6 +1,7 @@
 import api from "../services/api";
 import { useState, useEffect } from "react";
 import CharacterList from "./CharacterList";
+import "./App.scss";
 
 const App = (props) => {
   // state
