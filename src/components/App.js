@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import CharacterList from "./CharacterList";
 
 const App = (props) => {
+  // state
   const [characters, setCharacters] = useState([]);
+  const [filterText, setFilterText] = useState("");
 
+  // api
   useEffect(() => {
     api.getDataFromApi().then((data) => {
       setCharacters(data);
@@ -12,13 +15,24 @@ const App = (props) => {
     });
   }, []);
 
+  //events
+
   const handleFilter = (filterText) => {
-    console.log("ha cambiado", filterText);
+    return setFilterText(filterText);
   };
+
+  const filteredCharacters = characters.filter((character) => {
+    return character.name.toUpperCase().includes(filterText.toUpperCase());
+  });
+
+  console.log(filteredCharacters);
 
   return (
     <div className="App">
-      <CharacterList characters={characters} handleFilter={handleFilter} />
+      <CharacterList
+        characters={filteredCharacters}
+        handleFilter={handleFilter}
+      />
     </div>
   );
 };
