@@ -1,7 +1,9 @@
+import React from "react";
 import CharacterCard from "./CharacterCard";
+import CharacterFilter from "./CharacterFilter";
 
 const CharacterList = (props) => {
-  const charactersList = props.characters.map((character) => {
+  const characterslist = props.characters.map((character) => {
     return (
       <li key={character.id}>
         <CharacterCard character={character} />
@@ -9,6 +11,11 @@ const CharacterList = (props) => {
     );
   });
 
-  return <ul>{charactersList}</ul>;
+  return (
+    <div>
+      <CharacterFilter handleFilter={props.handleFilter} />
+      <ul>{characterslist}</ul>
+    </div>
+  );
 };
 export default CharacterList;
