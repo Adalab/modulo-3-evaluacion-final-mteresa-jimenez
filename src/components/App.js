@@ -1,14 +1,24 @@
-import React, { Component } from "react";
-import "./App.scss";
+import api from "../services/api";
+import { useState, useEffect } from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Hola mundo</h1>
-      </div>
-    );
-  }
-}
+const App = (props) => {
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    api.getDataFromApi().then((data) => {
+      setCharacters(data);
+      console.log(data);
+    });
+  }, []);
+
+  const charactersList = characters.map((character) => {
+    return <li>{character.name}</li>;
+  });
+  return (
+    <div className="App">
+      <ul>{charactersList}</ul>
+    </div>
+  );
+};
 
 export default App;
