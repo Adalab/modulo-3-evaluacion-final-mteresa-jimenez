@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const CharacterFilter = (props) => {
+  // PASO 1 FILTRO: Creo envento "onChange" y función handleFilter que recoge el "value" del input de texto y subo handleFilter mediante "props" hasta App.
   const handleFilter = (ev) => {
     props.handleFilter(ev.target.value);
   };

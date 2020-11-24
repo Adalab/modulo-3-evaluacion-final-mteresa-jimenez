@@ -14,6 +14,8 @@ const App = (props) => {
     });
   }, []);
 
+  // PASO 2 FILTRO: Ya he subido la función handleFilter desde el componente CharacterFilter y la defino. "filterText" recoge el valor de lo que escribo en el input de texto
+
   const handleFilter = (filterText) => {
     console.log("ha cambiado", filterText);
   };
