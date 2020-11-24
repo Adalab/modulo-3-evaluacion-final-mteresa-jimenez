@@ -1,5 +1,6 @@
 import api from "../services/api";
 import { useState, useEffect } from "react";
+import CharacterList from "./CharacterList";
 
 const App = (props) => {
   const [characters, setCharacters] = useState([]);
@@ -11,12 +12,9 @@ const App = (props) => {
     });
   }, []);
 
-  const charactersList = characters.map((character) => {
-    return <li>{character.name}</li>;
-  });
   return (
     <div className="App">
-      <ul>{charactersList}</ul>
+      <CharacterList characters={characters} />
     </div>
   );
 };
