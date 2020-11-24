@@ -1,7 +1,9 @@
 import CharacterCard from "./CharacterCard";
+import CharacterFilter from "./CharacterFilter";
+import Header from "./Header";
 
 const CharacterList = (props) => {
-  const charactersList = props.characters.map((character) => {
+  const characterslist = props.characters.map((character) => {
     return (
       <li key={character.id}>
         <CharacterCard character={character} />
@@ -9,6 +11,12 @@ const CharacterList = (props) => {
     );
   });
 
-  return <ul>{charactersList}</ul>;
+  return (
+    <div>
+      <Header />
+      <CharacterFilter />
+      <ul>{characterslist}</ul>
+    </div>
+  );
 };
 export default CharacterList;
