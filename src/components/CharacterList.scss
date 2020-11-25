@@ -1,11 +1,11 @@
 .characters {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: auto;
+  grid-template-columns: repeat(1, 1fr);
+  padding: auto;
 
   &--card {
     width: 230px;
-    height: 320px;
+    height: 350px;
     margin: 30px 15px 30px 15px;
     display: flex;
     flex-direction: column;
@@ -24,5 +24,13 @@
       font-size: 18px;
       font-weight: 600;
     }
+  }
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media all and (min-width: 1080px) {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

@@ -33,10 +33,11 @@ const App = (props) => {
     const characterId = characters.find((character) => {
       return character.id === routerCharacterId;
     });
-    if (characterId === undefined) {
-      return <p>"El personaje que buscas no existe"</p>;
-    } else {
+    console.log(characterId);
+    if (characterId) {
       return <CharacterDetail character={characterId} />;
+    } else {
+      return <p>El personaje que buscas no existe.</p>;
     }
   };
 
