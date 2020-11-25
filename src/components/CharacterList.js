@@ -11,6 +11,7 @@ const CharacterList = (props) => {
         <Link
           className="link-character-detail"
           to={`/character/${character.id}`}
+          title="Ir a más información sobre este personaje"
         >
           <CharacterCard character={character} />
         </Link>

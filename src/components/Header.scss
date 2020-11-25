@@ -2,21 +2,22 @@
   margin: 30px;
 
   @media all and (max-width: 769px) {
-    width: 300px;
+    width: 315px;
   }
 }
 
 .subtitle {
+  background-color: black;
   width: 700px;
   font-size: 20px;
   font-weight: 100;
   margin: 40px auto;
   padding: 10px;
-  border: teal solid 2px;
+  border: teal solid 3px;
   box-shadow: 2px 2px 6px 6px greenyellow;
 
   @media all and (max-width: 767px) {
-    width: 300px;
+    width: 295px;
     font-size: 16px;
   }
 }
