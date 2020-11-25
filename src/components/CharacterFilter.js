@@ -1,14 +1,19 @@
 import { useState } from "react";
+import "./CharacterFilter.scss";
 
 const CharacterFilter = (props) => {
-  // PASO 1 FILTRO: Creo envento "onChange" y función handleFilter que recoge el "value" del input de texto y subo handleFilter mediante "props" hasta App.
   const handleFilter = (ev) => {
     props.handleFilter(ev.target.value);
   };
   return (
     <form>
       <label htmlFor="characterName">Busca a un personaje: </label>
-      <input id="characterName" type="text" onChange={handleFilter} />
+      <input
+        className="filter-text"
+        id="characterName"
+        type="text"
+        onChange={handleFilter}
+      />
     </form>
   );
 };

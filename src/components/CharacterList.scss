@@ -1,15 +1,16 @@
 .characters {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin: auto;
 
   &--card {
     width: 230px;
     height: 320px;
-    margin: 30px;
+    margin: 30px 15px 30px 15px;
     display: flex;
     flex-direction: column;
     border: white solid 1px;
-    background-color: rgb(122, 231, 122);
+    background-color: rgb(101, 223, 101);
     border-radius: 25px;
 
     &__image {
@@ -19,7 +20,8 @@
     }
 
     &__name {
-      margin: 10px;
+      margin: 12px 10px;
+      font-size: 18px;
       font-weight: 600;
     }
   }

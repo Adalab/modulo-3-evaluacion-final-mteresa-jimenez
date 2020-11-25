@@ -1,6 +1,8 @@
 import api from "../services/api";
 import { useState, useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
 import CharacterList from "./CharacterList";
+import CharacterDetail from "./CharacterDetail";
 import "./App.scss";
 
 const App = (props) => {
@@ -26,14 +28,29 @@ const App = (props) => {
     return character.name.toUpperCase().includes(filterText.toUpperCase());
   });
 
-  console.log(filteredCharacters);
+  const renderCharacterDetail = (props) => {
+    const routerCharacterId = parseInt(props.match.params.id);
+    const characterId = characters.find((character) => {
+      return character.id === routerCharacterId;
+    });
+    if (characterId === undefined) {
+      return <p>"El personaje que buscas no existe"</p>;
+    } else {
+      return <CharacterDetail character={characterId} />;
+    }
+  };
 
   return (
     <div className="App">
-      <CharacterList
-        characters={filteredCharacters}
-        handleFilter={handleFilter}
-      />
+      <Switch>
+        <Route exact path="/">
+          <CharacterList
+            characters={filteredCharacters}
+            handleFilter={handleFilter}
+          />
+        </Route>
+        <Route path="/character/:id" render={renderCharacterDetail} />
+      </Switch>
     </div>
   );
 };

@@ -1,15 +1,16 @@
 import logo from "../images/logo.png";
+import "./Header.scss";
 
 const Header = () => {
   return (
     <header>
       <img src={logo} alt="Logo con el nombre de la serie - Rick y Morty" />
-      <p>
-        <strong>
+      <h2 className="subtitle">
+        <span>
           "No me vas a creer, porque casi nunca pasa, pero cometí un error."
-        </strong>
-        - Rick, quien obviamente nunca había trabajado en React.
-      </p>
+        </span>{" "}
+        <br />- Rick, quien obviamente nunca había trabajado en React.
+      </h2>
     </header>
   );
 };
