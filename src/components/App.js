@@ -37,7 +37,7 @@ const App = (props) => {
     if (characterId) {
       return <CharacterDetail character={characterId} />;
     } else {
-      return <p>El personaje que buscas no existe.</p>;
+      return <p className="not-exist">El personaje que buscas no existe.</p>;
     }
   };
 
