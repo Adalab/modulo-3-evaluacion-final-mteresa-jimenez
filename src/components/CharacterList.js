@@ -22,7 +22,10 @@ const CharacterList = (props) => {
   return (
     <div>
       <Header />
-      <CharacterFilter handleFilter={props.handleFilter} />
+      <CharacterFilter
+        handleFilter={props.handleFilter}
+        handleChangeStatus={props.handleChangeStatus}
+      />
       <ul className="characters">{characterslist}</ul>
     </div>
   );

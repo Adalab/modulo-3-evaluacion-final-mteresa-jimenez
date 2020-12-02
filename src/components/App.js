@@ -9,12 +9,12 @@ const App = (props) => {
   // state
   const [characters, setCharacters] = useState([]);
   const [filterText, setFilterText] = useState("");
+  const [filterStatus, setFilterStatus] = useState("all");
 
   // api
   useEffect(() => {
     api.getDataFromApi().then((data) => {
       setCharacters(data);
-      console.log(data);
     });
   }, []);
 
@@ -24,9 +24,17 @@ const App = (props) => {
     return setFilterText(filterText);
   };
 
-  const filteredCharacters = characters.filter((character) => {
-    return character.name.toUpperCase().includes(filterText.toUpperCase());
-  });
+  const handleChangeStatus = (filterStatus) => {
+    setFilterStatus(filterStatus);
+  };
+
+  const filteredCharacters = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(filterText.toUpperCase());
+    })
+    .filter((character) => {
+      return filterStatus === "all" || character.status === filterStatus;
+    });
 
   const renderCharacterDetail = (props) => {
     const routerCharacterId = parseInt(props.match.params.id);
@@ -37,7 +45,18 @@ const App = (props) => {
     if (characterId) {
       return <CharacterDetail character={characterId} />;
     } else {
-      return <p className="not-exist">El personaje que buscas no existe.</p>;
+      return (
+        <div>
+          <p className="not-exist">El personaje que buscas no existe.</p>
+          <h2 className="subtitle">
+            <span>
+              "No me vas a creer, porque casi nunca pasa, pero cometí un error."
+            </span>{" "}
+            <br />- Rick, quien, obviamente, nunca había trabajado en React.
+          </h2>
+          ;
+        </div>
+      );
     }
   };
 
@@ -48,6 +67,7 @@ const App = (props) => {
           <CharacterList
             characters={filteredCharacters}
             handleFilter={handleFilter}
+            handleChangeStatus={handleChangeStatus}
           />
         </Route>
         <Route path="/character/:id" render={renderCharacterDetail} />
