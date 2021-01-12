@@ -12,25 +12,29 @@ const CharacterFilter = (props) => {
 
   return (
     <form className="form">
-      <label htmlFor="characterName">Busca a un personaje: </label>
-      <input
-        className="filter-text"
-        id="characterName"
-        type="text"
-        onChange={handleFilter}
-      />
-      <label htmlFor="status">Filtrar por status: </label>
-      <select
-        className="filter-text"
-        name="status"
-        id="status"
-        onChange={handleChangeStatus}
-      >
-        <option value="all">Todos</option>
-        <option value="Alive">Alive</option>
-        <option value="Dead">Dead</option>
-        <option value="unknown">unknown</option>
-      </select>
+      <div className="form__filter">
+        <label htmlFor="characterName">Busca a un personaje: </label>
+        <input
+          className="filter-text"
+          id="characterName"
+          type="text"
+          onChange={handleFilter}
+        />
+      </div>
+      <div className="form__filter">
+        <label htmlFor="status">Filtrar por status: </label>
+        <select
+          className="filter-text"
+          name="status"
+          id="status"
+          onChange={handleChangeStatus}
+        >
+          <option value="all">Todos</option>
+          <option value="Alive">Alive</option>
+          <option value="Dead">Dead</option>
+          <option value="unknown">unknown</option>
+        </select>
+      </div>
     </form>
   );
 };
