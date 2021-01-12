@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.011a1ea2.chunk.css",
-    "main.js": "./static/js/main.8d4f585e.chunk.js",
-    "main.js.map": "./static/js/main.8d4f585e.chunk.js.map",
+    "main.css": "./static/css/main.5148b7ce.chunk.css",
+    "main.js": "./static/js/main.a97fda81.chunk.js",
+    "main.js.map": "./static/js/main.a97fda81.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.5e08e971.js",
     "runtime-main.js.map": "./static/js/runtime-main.5e08e971.js.map",
     "static/js/2.e150a129.chunk.js": "./static/js/2.e150a129.chunk.js",
     "static/js/2.e150a129.chunk.js.map": "./static/js/2.e150a129.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.011a1ea2.chunk.css.map": "./static/css/main.011a1ea2.chunk.css.map",
+    "static/css/main.5148b7ce.chunk.css.map": "./static/css/main.5148b7ce.chunk.css.map",
     "static/js/2.e150a129.chunk.js.LICENSE.txt": "./static/js/2.e150a129.chunk.js.LICENSE.txt",
     "static/media/App.scss": "./static/media/Rick-And-Morty-Wallpaper.6048f9b9.jpg",
     "static/media/logo.de13d484.png": "./static/media/logo.de13d484.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.5e08e971.js",
     "static/js/2.e150a129.chunk.js",
-    "static/css/main.011a1ea2.chunk.css",
-    "static/js/main.8d4f585e.chunk.js"
+    "static/css/main.5148b7ce.chunk.css",
+    "static/js/main.a97fda81.chunk.js"
   ]
 }
